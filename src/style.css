@@ -121,6 +121,44 @@ main{
     line-height: 23px;
 }
 
+/* EVENT */
+
+.events{
+    background-color: #dfdcdc;
+    padding: 5px;
+  }
+  
+  .events h2{
+    margin: 30px;
+    font-weight: 700;
+  }
+  
+  .events ul{
+    margin: 30px;
+    text-align: start;
+  }
+  
+  .events ul li p{
+  font-weight: 700;
+  }
+  
+/* ICONS */
+
+  .icon{
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #a975ee;
+  }
+  
+  .icons{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+
+  }
+
 /* REPOSITORIES */
 
 .container .profile-data .repositories h2{

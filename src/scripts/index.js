@@ -1,6 +1,7 @@
 // IMPORT SERVICES
 import { getUser } from './services/user.js'
 import { getRepositories } from './services/repositories.js'
+import { getEvents } from './services/events.js'
 
 // IMPORT OBJECTS
 import { user } from './objects/user_obj.js'
@@ -30,7 +31,6 @@ document.getElementById('input-search').addEventListener('keyup', (e) =>{
     }
 })
 
-
 async function getUserData(userName){
     
     const userResponse = await getUser(userName)
@@ -41,13 +41,11 @@ async function getUserData(userName){
     }
 
     const repositoriesResponse = await getRepositories(userName)
-
+    const eventsResponse = await getEvents(userName)
 
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
+    user.setEvents(eventsResponse)
 
-    screen.renderUser(user)
-
+    screen.renderUser(user);
 }
-
-// o ?? é um operador de coalecência nula
